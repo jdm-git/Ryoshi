@@ -11,6 +11,7 @@ public class Door : Collidable
 		if(coll.name == "Player")
 		{
 			// Player enters the house
+			GameManager.instance.SaveState();
 			UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
 
 		}
