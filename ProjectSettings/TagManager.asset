@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Floor
+    uniqueID: 3721570349
+    locked: 0
+  - name: Structures
+    uniqueID: 3508977211
+    locked: 0
+  - name: Collectable
+    uniqueID: 504167397
+    locked: 0
   - name: Actor
     uniqueID: 3159116203
     locked: 0
