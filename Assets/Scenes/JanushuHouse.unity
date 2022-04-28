@@ -585,7 +585,11 @@ GameObject:
   - component: {fileID: 2034691259}
   - component: {fileID: 2034691258}
   m_Layer: 0
+<<<<<<< Updated upstream
   m_Name: grass_0 (1)
+=======
+  m_Name: Exit
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
