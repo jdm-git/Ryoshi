@@ -39,7 +39,14 @@ public class Weapon : Collidable
 		{
 			if (coll.name == "Player")
 				return;
-			Debug.Log(coll.name);
+
+			Damage dmg = new Damage()
+			{
+				damageAmount = damagePoint,
+				origin = transform.position,
+				pushForce = pushForce
+			};
+			coll.SendMessage("ReceiveDamage", dmg);
 		}
 	}
 	private void Swing()
