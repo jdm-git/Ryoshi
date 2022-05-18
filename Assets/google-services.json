@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1001610450166",
+    "project_id": "ryoshi-project",
+    "storage_bucket": "ryoshi-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1001610450166:android:485a6b19754ce4e8dd88d7",
+        "android_client_info": {
+          "package_name": "com.ryoshiproject.firebaseandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1001610450166-jl5pml9idatt1v3n04qgu8lhipeig3v9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCT-7WCyIZ-AMRqB86UFkQkh9Rb6kA32hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1001610450166-jl5pml9idatt1v3n04qgu8lhipeig3v9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1001610450166-v1tn23ss7l9uaa10d0tfetom793ctiu5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ryoshiproject.firebaseios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
