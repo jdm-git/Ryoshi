@@ -8,8 +8,8 @@ public class Player : Mover
 	public Joystick joystick;
 	private void FixedUpdate()
 	{
-		float x = joystick.Horizontal;
-		float y = joystick.Vertical;
+		float x = Input.GetAxis("Horizontal");
+		float y = Input.GetAxis("Vertical");
 
 		UpdateMotor(new Vector3(x, y, 0));
 	}
