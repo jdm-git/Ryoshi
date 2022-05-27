@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JanushuHouse.unity
     guid: 65a0af8957b9bfa42a4d89436a552057
+  - enabled: 1
+    path: Assets/Scenes/SimpleAuth.unity
+    guid: 12d4792eae6b2384883cfd124269f3a5
+  - enabled: 1
+    path: Assets/Scenes/MainMap.unity
+    guid: 8517fb2931efc643ea7e1f163f834756
+  - enabled: 1
+    path: Assets/Scenes/Workshop.unity
+    guid: f6a3161f3bf95c64b9a21b48455e0d54
   m_configObjects: {}

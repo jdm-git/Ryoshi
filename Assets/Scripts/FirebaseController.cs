@@ -122,6 +122,7 @@ public class FirebaseController : MonoBehaviour
         profileUserMail_Text.text = "";
         profileUsername_Text.text = "";
         OpenLogPanel();
+        isSigned = false;
     }
 
     public void CreateUser(string email, string password, string username) 
@@ -230,6 +231,10 @@ public class FirebaseController : MonoBehaviour
         signUpCPasswd.ForceLabelUpdate();
         Debug.Log("XD");
 	}
+    public void PlayGame()
+	{
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainMap");
+    }
 
     bool isSigned = false;
     void Update()
