@@ -4821,6 +4821,7 @@ MonoBehaviour:
   profileUserMail_Text: {fileID: 2005632166}
   profileUsername_Text: {fileID: 28447109}
   rememberMe: {fileID: 1995944658}
+  showPassword: {fileID: 2053115508}
   dependencyStatus: 0
 --- !u!4 &1255170863
 Transform:
@@ -7775,8 +7776,8 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 7748ad7cced19c46f85f83b07516581e, type: 3}
-        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
@@ -7787,7 +7788,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &2067257131
 GameObject:
   m_ObjectHideFlags: 0
