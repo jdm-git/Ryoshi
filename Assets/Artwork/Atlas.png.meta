@@ -619,7 +619,7 @@ TextureImporter:
     second: Atlas_204
   - first:
       213: 2669436491556051002
-    second: Atlas_205
+    second: chest_0
   - first:
       213: 8553001441579941725
     second: Atlas_206
@@ -664,7 +664,7 @@ TextureImporter:
     second: Atlas_219
   - first:
       213: -4237532329049844237
-    second: Atlas_220
+    second: chest_1
   - first:
       213: -3170149689839786730
     second: Atlas_221
@@ -5065,7 +5065,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_205
+      name: chest_0
       rect:
         serializedVersion: 2
         x: 224
@@ -5380,7 +5380,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_220
+      name: chest_1
       rect:
         serializedVersion: 2
         x: 224

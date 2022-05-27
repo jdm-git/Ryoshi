@@ -1,7 +1,4 @@
-using System;
-using System.Threading.Tasks; 
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Firebase;
@@ -14,28 +11,31 @@ public class FirebaseController : MonoBehaviour
     public GameObject loginPanel, signUpPanel, profilePanel, forgetPasswdPanel, notificationPanel;
     public InputField loginMail, loginPasswd, signUpMail, signUpPasswd, signUpCPasswd, signUpUsername, forgetPasswdMail;
     public Text notification_Title_Text, notification_Message_Text, profileUserMail_Text, profileUsername_Text;
-    public Toggle rememberMe;
+    public Toggle rememberMe, showPassword;
 
-    Firebase.Auth.FirebaseAuth auth;
-    Firebase.Auth.FirebaseUser user;
+
+    public FirebaseAuth auth;
+    public FirebaseUser user;
+    public DependencyStatus dependencyStatus;
 
     bool isSignIn = false;
 
     void Start()
     {
-        Firebase.FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
-            var dependencyStatus = task.Result;
-            if (dependencyStatus == Firebase.DependencyStatus.Available) {
-                // Create and hold a reference to your FirebaseApp,
-                // where app is a Firebase.FirebaseApp property of your application class.
-                InitializeFirebase();
+        FirebaseApp.CheckAndFixDependenciesAsync().ContinueWith(task => {
+            dependencyStatus = task.Result;
 
-                // Set a flag here to indicate whether Firebase is ready to use by your app.
+            if (dependencyStatus == DependencyStatus.Available) {
+                InitializeFirebase();
             } else {
                 UnityEngine.Debug.LogError(System.String.Format(
                     "Could not resolve all Firebase dependencies: {0}", dependencyStatus));
                 // Firebase Unity SDK is not safe to use here.
             }
+        });
+        showPassword.onValueChanged.AddListener(delegate
+        {
+            ShowPassword();
         });
     }
     public void OpenLogPanel()
@@ -44,6 +44,7 @@ public class FirebaseController : MonoBehaviour
         signUpPanel.SetActive(false);
         profilePanel.SetActive(false);
         forgetPasswdPanel.SetActive(false);
+        
     }
     
     public void OpenSignUpPanel()
@@ -59,6 +60,7 @@ public class FirebaseController : MonoBehaviour
         signUpPanel.SetActive(false);
         profilePanel.SetActive(true);
         forgetPasswdPanel.SetActive(false);
+        
     }
 
     public void OpensForgetPasswdPanel()
@@ -122,7 +124,7 @@ public class FirebaseController : MonoBehaviour
         OpenLogPanel();
     }
 
-    public void CreateUser(string email, string password, string Username) 
+    public void CreateUser(string email, string password, string username) 
     {
         auth.CreateUserWithEmailAndPasswordAsync(email, password).ContinueWithOnMainThread(task => {
             if (task.IsCanceled) {
@@ -138,9 +140,11 @@ public class FirebaseController : MonoBehaviour
             Firebase.Auth.FirebaseUser newUser = task.Result;
             Debug.LogFormat("Firebase user created successfully: {0} ({1})",
                 newUser.DisplayName, newUser.UserId);
+
         });
 
-        UpadteUserProfile(Username);
+        UpadteUserProfile(username);
+        OpenProfilePanel();
     }
 
     public void SignInUser(string email, string password)
@@ -218,13 +222,21 @@ public class FirebaseController : MonoBehaviour
             });
         }
     }
+    public void ShowPassword()
+	{
+        signUpPasswd.contentType = InputField.ContentType.Standard;
+        signUpCPasswd.contentType = InputField.ContentType.Standard;
+        signUpPasswd.ForceLabelUpdate();
+        signUpCPasswd.ForceLabelUpdate();
+        Debug.Log("XD");
+	}
 
     bool isSigned = false;
     void Update()
     {
         if(isSignIn)
         {
-            if(isSigned)
+            if(!isSigned)
             {
                 isSigned = true;
                 profileUsername_Text.text = "" + user.DisplayName;

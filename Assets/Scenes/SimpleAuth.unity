@@ -349,8 +349,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 24670673}
   m_TextComponent: {fileID: 254548430}
   m_Placeholder: {fileID: 1516030486}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -845,7 +845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &125640508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -925,7 +925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &155511168
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2323,7 +2323,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1255170862}
         m_TargetAssemblyTypeName: FirebaseController, Assembly-CSharp
-        m_MethodName: OpenProfilePanel
+        m_MethodName: SignUpUser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2533,6 +2533,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1255170862}
         m_TargetAssemblyTypeName: FirebaseController, Assembly-CSharp
         m_MethodName: OpenSignUpPanel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11500000, guid: 7748ad7cced19c46f85f83b07516581e, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4809,6 +4821,7 @@ MonoBehaviour:
   profileUserMail_Text: {fileID: 2005632166}
   profileUsername_Text: {fileID: 28447109}
   rememberMe: {fileID: 1995944658}
+  dependencyStatus: 0
 --- !u!4 &1255170863
 Transform:
   m_ObjectHideFlags: 0
@@ -5498,8 +5511,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1475198436}
   m_TextComponent: {fileID: 1380964942}
   m_Placeholder: {fileID: 923759956}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -7761,7 +7774,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 7748ad7cced19c46f85f83b07516581e, type: 3}
+        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!1 &2067257131
 GameObject:
