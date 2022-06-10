@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
-  <string name="gcm_defaultSenderId" translatable="false">1001610450166</string>
-  <string name="google_storage_bucket" translatable="false">ryoshi-project.appspot.com</string>
-  <string name="project_id" translatable="false">ryoshi-project</string>
-  <string name="google_api_key" translatable="false">AIzaSyCT-7WCyIZ-AMRqB86UFkQkh9Rb6kA32hc</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCT-7WCyIZ-AMRqB86UFkQkh9Rb6kA32hc</string>
-  <string name="google_app_id" translatable="false">1:1001610450166:android:485a6b19754ce4e8dd88d7</string>
-  <string name="default_web_client_id" translatable="false">1001610450166-jl5pml9idatt1v3n04qgu8lhipeig3v9.apps.googleusercontent.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">679165170703</string>
+  <string name="google_storage_bucket" translatable="false">ryoshi-40dc8.appspot.com</string>
+  <string name="project_id" translatable="false">ryoshi-40dc8</string>
+  <string name="google_api_key" translatable="false">AIzaSyDtVPkMHHdgYvnCg_EDF0udh3uqYzsnYpo</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDtVPkMHHdgYvnCg_EDF0udh3uqYzsnYpo</string>
+  <string name="google_app_id" translatable="false">1:679165170703:android:4d3181b160df6711e13f7a</string>
+  <string name="default_web_client_id" translatable="false">679165170703-o2b3q1ih42h2crcrc3sfl9h1b8qhbuqk.apps.googleusercontent.com</string>
 </resources>
