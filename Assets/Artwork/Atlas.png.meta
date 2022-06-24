@@ -574,7 +574,7 @@ TextureImporter:
     second: Atlas_189
   - first:
       213: 7830920448493193388
-    second: Atlas_190
+    second: menu_0
   - first:
       213: -1623517267125872434
     second: Atlas_191
@@ -4750,7 +4750,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_190
+      name: menu_0
       rect:
         serializedVersion: 2
         x: 240

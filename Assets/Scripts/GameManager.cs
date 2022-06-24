@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 	// References
 	public Player player;
 	public FloatingTextManager floatingTextManager;
+	public Weapon weapon;
 
 
 	// Progress (xp, money)
@@ -39,6 +40,21 @@ public class GameManager : MonoBehaviour
 		floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
 	}
 
+	public bool TryUpgradeWeapon()
+	{
+		// is weapon maxed?
+		if(weaponPrices.Count <= weapon.weaponLevel)
+		{
+			return false;
+		}
+		if(ryos >= weaponPrices[weapon.weaponLevel])
+		{
+			ryos -= weaponPrices[weapon.weaponLevel];
+			weapon.UpgradeWeapon();
+			return true;
+		}
+		return false;
+	}
 
 	// Save the game state
 	public void SaveState()
